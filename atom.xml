@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://flydeemon.github.io/"/>
-  <updated>2017-03-12T12:19:14.628Z</updated>
+  <updated>2017-04-20T07:29:11.727Z</updated>
   <id>https://flydeemon.github.io/</id>
   
   <author>
@@ -16,21 +16,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>文章</title>
-    <link href="https://flydeemon.github.io/2017/03/12/%E6%96%87%E7%AB%A0/"/>
-    <id>https://flydeemon.github.io/2017/03/12/文章/</id>
-    <published>2017-03-12T12:08:45.000Z</published>
-    <updated>2017-03-12T12:19:14.628Z</updated>
+    <title>React 学习记录</title>
+    <link href="https://flydeemon.github.io/2017/04/20/React-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>https://flydeemon.github.io/2017/04/20/React-学习记录/</id>
+    <published>2017-04-20T07:23:34.000Z</published>
+    <updated>2017-04-20T07:29:11.727Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="我的文章"><a href="#我的文章" class="headerlink" title="我的文章"></a>我的文章</h1><p>厦门的天空<br>我的答复</p>
+    <content type="html"><![CDATA[<h1 id="一、环境搭建"><a href="#一、环境搭建" class="headerlink" title="一、环境搭建"></a>一、环境搭建</h1><p>1.使用 git 管理仓库</p>
+<pre><code>git init
+</code></pre><p>2.使用 npm 管理项目</p>
+<pre><code>npm init
+</code></pre><p>3.使用 react 库编写</p>
+<pre><code>npm install --save-dev react react-dom
+</code></pre><p>4.使用 ES2015 语法</p>
+<pre><code>npm install --save-dev babel-core babel-loader babelify babel-preset-es2015 babel-preset-react
+</code></pre><p>5.使用 webpack 构建模块</p>
+<pre><code>npm install -g webpack webpack-dev-server
+npm install --save-dev webpack webpack-dev-server
+</code></pre><p>6.启动项目</p>
+<pre><code>webpack 编译文件，需要在浏览器打开本地 index.html
+webpack-dev-server --content-base --inline --hot 实时编译，浏览器地址 http://localhsot:8080
+</code></pre><h1 id="二、React-笔记"><a href="#二、React-笔记" class="headerlink" title="二、React 笔记"></a>二、React 笔记</h1><p>1.组件中定义 this.xxx 时要在 super() 后定义</p>
+<p>2.render 中的 this 指向当前类的实例</p>
+<p>3.render 中的 this.props[xxx] 的值指向在组件类被调用的地方所赋的值</p>
+<p>4.当在 render 中需要遍历时，Array.prototype.map() 需要为 html 元素设置唯一 key。可以使用 React.Children.map() 遍历组件中的子元素</p>
+<p>5.组件类的类名首字母必须是大写，组件类只能包含一个顶层标签</p>
+<p>6.JSX 语法中，标签中的 class 和 for 属性分别写成 className 和 htmlFor，否则会报错</p>
+<p>7.在组件中的监听器需要都需要进行绑定 this.handle = this.handle.bind(this) 否则监听器中的 this 将指向 null</p>
+<p>8.需要获取真实的标签节点需要 this.refs.xxx 并在组件中定义该属性 <code>&lt;div ref=&quot;xxx&quot;&gt;&lt;/div&gt;</code></p>
+<p>9.在 ES6 中不需要重写 getInitialState() 直接在构造器中定义 this.state = xxx</p>
+<p>10.区分 this.props 和 this.state，this.props 是一旦定义就不会发生改变；this.state 是与用户交互的状态，随时会改变</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;我的文章&quot;&gt;&lt;a href=&quot;#我的文章&quot; class=&quot;headerlink&quot; title=&quot;我的文章&quot;&gt;&lt;/a&gt;我的文章&lt;/h1&gt;&lt;p&gt;厦门的天空&lt;br&gt;我的答复&lt;/p&gt;
-
+      &lt;h1 id=&quot;一、环境搭建&quot;&gt;&lt;a href=&quot;#一、环境搭建&quot; class=&quot;headerlink&quot; title=&quot;一、环境搭建&quot;&gt;&lt;/a&gt;一、环境搭建&lt;/h1&gt;&lt;p&gt;1.使用 git 管理仓库&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
     
     </summary>
+    
+      <category term="react" scheme="https://flydeemon.github.io/categories/react/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React 开发中遇到的坑</title>
+    <link href="https://flydeemon.github.io/2017/03/12/%E6%96%87%E7%AB%A0/"/>
+    <id>https://flydeemon.github.io/2017/03/12/文章/</id>
+    <published>2017-03-12T12:08:45.000Z</published>
+    <updated>2017-04-20T07:21:58.967Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="警告：需要安装-prop-types-package"><a href="#警告：需要安装-prop-types-package" class="headerlink" title="警告：需要安装 prop-types package"></a>警告：需要安装 prop-types package</h1><p>这个是 React 的问题，最近官方更新 React 15.5.0 之后的版本都将弃用 React.PropTypes。<br>所以会提示让你安装 prop-types。详情去 React 官方的 release 查看。<br>如果你的项目中使用了第三方库，而那些库还没更新的情况下，最好的解决办法是：安装旧版本的 React 版本。<br>命令： npm install –save-dev react@15.3.2 react-dom@15.3.2</p>
+<p>如果你项目中并没有使用第三方库，那么就更新 React 版本并安装 prop-types 包。<br>命令： npm install –save-dev react prop-types</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//项目中需要引入 prop-types</div><div class="line">import PropTypes from &apos;prop-types&apos;;</div><div class="line"></div><div class="line">const propTypes: &#123;</div><div class="line">    myArray: PropTypes.array,</div><div class="line">    myBool: PropTypes.bool,</div><div class="line">    myFunc: PropTypes.func,</div><div class="line">    myNumber: PropTypes.number,</div><div class="line">    myString: PropTypes.string,</div><div class="line">    requiredFunc: PropTypes.func.isRequired</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="webpack2-无法自动刷新或报错的问题"><a href="#webpack2-无法自动刷新或报错的问题" class="headerlink" title="webpack2 无法自动刷新或报错的问题"></a>webpack2 无法自动刷新或报错的问题</h1><p>这个其实是路径的问题。嘛，我来慢慢解释下吧。<br>首先，webpack-dev-server 运行的时候，会将编译好的文件存储在内存中，所以你运行这条命令的时候在项目中是找不到这个编译好的文件的。那么问题来了，index.html 中 script 标签是要引入这个编译好的文件的，那该怎么办？（这里我们把编译好的文件定义成: bundle.js）。<br>解决办法：</p>
+<ul>
+<li><p>第一个办法是 index.html 中 script 标签直接从项目的根目录引入 bundle.js 。</p>
+<p>  <code>&lt;script src=&quot;bundle.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>  这里有个前提，你的 index.html 必须在项目根目录下。比如 react_example -&gt; index.html 。</p>
+</li>
+<li><p>第二个办法是在 webpack.config.js 文件中指定 bundle.js 放在哪里。<br>  module.exports.output 中添加 publiPath 属性，该属性指定 bundle.js 文件放在 react_example/assets/ 中。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    path: __dirname + &apos;/assets/&apos;,</div><div class="line">    filename: &apos;bundle.js&apos;,</div><div class="line">    publicPath: &apos;/assets/&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  然后修改index.html 中 script 标签</p>
+<p>  <code>&lt;script src=&quot;assets/bundle.js&quot;&gt;&lt;/script&gt;</code></p>
+</li>
+</ul>
+<p>接下来，<code>webpack-dev-server --content-base src --hot --inline</code> 报错的问题。<br>–content-base 参数是指：定义从哪个路径开始监听。后面的 src 如果不写默认就是 / ，也就是当前项目根目录下，如果你加了 src 就是 当前项目根目录下的 src 目录里。报错的原因就是这个，你的 index.html 是放在 src 中吗？<br>解决办法：<br>    先检查你的 index.html 是否放在 项目根目录下，如果不是，建议放在 项目根目录下。然后编写命令：<br>    <code>webpack-dev-server --content-base --inline --hot</code><br>    src 就不需要写了。默认从项目根目录开始监听。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;警告：需要安装-prop-types-package&quot;&gt;&lt;a href=&quot;#警告：需要安装-prop-types-package&quot; class=&quot;headerlink&quot; title=&quot;警告：需要安装 prop-types package&quot;&gt;&lt;/a&gt;警告：需要安装 
+    
+    </summary>
+    
+      <category term="react" scheme="https://flydeemon.github.io/categories/react/"/>
     
     
   </entry>
