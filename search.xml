@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title><![CDATA[vue-cli eslint 问题]]></title>
+      <url>https://flydeemon.github.io/2017/08/16/vue-cli-eslint/</url>
+      <content type="html"><![CDATA[<h1 id="关于-vue-cli-带给我们的困扰"><a href="#关于-vue-cli-带给我们的困扰" class="headerlink" title="关于 vue-cli 带给我们的困扰"></a>关于 vue-cli 带给我们的困扰</h1><p>vue-cli 自带的 eslint 配置的代码风格和我们平时使用的风格不一样</p>
+<p>主要是两个：</p>
+<ul>
+<li>缩进是两个空格</li>
+<li>在函数的括号前面必须有一个空格</li>
+</ul>
+<p>这样就会带给我们一些编码上的困扰，接下来我们来看如何解决它！</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.修改该文件 <code>.eslintrc.js</code>, 加入代码修改缩进为4个空格和修改函数的括号前面不需带空格</p>
+<p><img src="pm1.png" alt="pic"></p>
+<p>2.确保 <code>src</code> 下的文件缩进风格是 4 个 space (我的编辑器是 sublime)</p>
+<p><img src="pm2.png" alt="pic"></p>
+<h2 id="如果我不想使用-eslint-怎么办？"><a href="#如果我不想使用-eslint-怎么办？" class="headerlink" title="如果我不想使用 eslint 怎么办？"></a>如果我不想使用 eslint 怎么办？</h2><p>直接注释图下的代码， <code>build/webpack.base.conf.js</code> 路径下</p>
+<p><img src="pm3.png" alt="pic"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> vue </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Web 离线缓存]]></title>
       <url>https://flydeemon.github.io/2017/04/20/Web-%E7%A6%BB%E7%BA%BF%E7%BC%93%E5%AD%98/</url>
       <content type="html"><![CDATA[<h1 id="一、H5之前如何实现存储"><a href="#一、H5之前如何实现存储" class="headerlink" title="一、H5之前如何实现存储"></a>一、H5之前如何实现存储</h1><h2 id="1-关于存储"><a href="#1-关于存储" class="headerlink" title="1.关于存储"></a>1.关于存储</h2><ul>
