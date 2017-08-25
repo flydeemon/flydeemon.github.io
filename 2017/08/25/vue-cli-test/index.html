@@ -10,7 +10,7 @@
     
     <title>
         
-            about | 
+            vue-cli test | 
         
         flydeemon
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://flydeemon.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="about | flydeemon">
+    <meta property="og:title" content="vue-cli test | flydeemon">
     <meta property="og:description" content="null">
     
 
@@ -210,6 +210,41 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#关于-vue-cli-e2e-和-unit-测试报错的问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">关于 vue-cli e2e 和 unit 测试报错的问题</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
 
 <!-- Layouts -->
 
@@ -235,7 +270,7 @@
         
     
             <p class="article-headline-p">
-                about
+                vue-cli test
             </p>
         </div>
 
@@ -254,7 +289,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>John Doe</strong>
-        <span>3月 12, 2017</span>
+        <span>8月 25, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -275,7 +310,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACbUlEQVR42u3aMXLDMAwEQP//00mbmYyVO5BilMyyciHZXBYEDOD18a/XCw8PDw8PDw8P72G8V7y+P//2B4Lv+frk98+zveHh4eGd5P1w1V5uK3n33QFdH9Zwb3h4eHgHedfBYPZWsvXkd4u94eHh4T2MlwSJhLr3EPHw8PD+Cq8tOrRpNB4eHt7zeckf/iRp3vv80VoLHh4eXsxrG2AnP/9Cfw8PDw/vklePNAVJ7XUSnCT024au8PDw8G7grTSo2kNZufqTdBwPDw/vDG8WAPJRqnY8a0OwwcPDw7uZlzfs2yQ4GQuoL/2ksIuHh4d3hLc+QJBsqz3KbcUIPDw8vNt4KytJeWdJ84ZaCx4eHt5tdc7kas4v/TZlnwWhotaCh4eHt5XXkvLSajvC1T6Jh4eHd543u+jz0au8PZbzNlSp8fDw8BZ4s2LuStusBbfNMDw8PLyTvFnpIR8dyAu7SVjaUIzAw8PDG/FWmvrrwWNvqMDDw8M7ycubVW0Zt03fV1preHh4eCd5d1/xeZreNr2GM2V4eHh4N/Nmm87bYCuFiQ2BAQ8PD2/UIco3MUvH8wLxSkjAw8PDO8+bYdoR1dnAwdLQFR4eHt5W3q4Bqbbc0A6t4uHh4T2H1658jCAfz1oJS3h4eHjnea94JY3/FtYWc5dmyvDw8PC28pJg0JYb2oNr211vvwEPDw/vIG+9qZ9vPQkVs5IEHh4e3tN4dWmgHEJNkvVhSo2Hh4f3MF4eDPJhrFl4wMPDwzvJy4sRs1S7ve7zcQE8PDy887yVBtisWZU30uoSMx4eHt7NvP+38PDw8PDw8PDwHrA+AX8c6Exz6JvvAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACcUlEQVR42u3aQW7jMBAEQP//05vrAomd7hFJK0bxFMSyxNKBHDfn8e+jxwMPDw8PDw8PD+9mvEc8/r/++x1+eMy3b73+7rNP87nh4eHhneT9stS+vOb1w5IrkxeUzw0PDw/vJG+2GSSfPrtnvgkVc8PDw8O7GW/VdKMlHg8PD++DePkd2oIbDw8P72/xkge3m8GzMKINgg9lLXh4eHgxb3YAdubvt53v4eHh4S1qukrK3HbSG5uu8PDw8Dbw2papK4t7UmTX28DsFwMeHh7eIt7raeWTTsLf/AUlcQYeHh7eed7rZXcGmx2VzQJfPDw8vJO8VUdf7TFVCy5eIh4eHt5mXtuKmjwsDxFm4e8wxsXDw8NbxMuDgLYUbuOM/DCsCCPw8PDwNvBmkUGy3LfHV2088bRMx8PDwzvOq2PTcrRNA8t+MeDh4eEt4s3C1lVtBztKcDw8PLwzvLxpoC3HZ9cnTVd4eHh47+Xlx/M5IC+gk+O3osTHw8PD28yrvzwrc0tGEkAMm67w8PDwlvJyRlLmtrFFG+w+fSl4eHh4B3ltETybbnJ4lpf7w5IaDw8P7wJvdqO2paANjtsNBg8PD+8OvOul9qz5YHFJjYeHh7ft13p9i1GDVNvGOiy18fDw8DbzZuX19abVKyX4L/fBw8PD28x7xCMPbWcRcPuy8PDw8N7LuxJMrBp5CDI838PDw8PbwGuPoPJQI285XbDZ4OHh4d2MNyt/Z8v9LMzFw8PDuycvPxKbbTCz142Hh4d3npeHEclinbQjtI0Ch2JcPDw8vCMHYLOCuy3Eo//g4eHhbeZ93sDDw8PDw8PDw7vB+AKS1uhMqz7GYQAAAABJRU5ErkJggg==">
         </ul>
     
 
@@ -303,7 +338,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=about&url=https://flydeemon.github.io//about/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=vue-cli test&url=https://flydeemon.github.io//2017/08/25/vue-cli-test/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -312,7 +347,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=about&url=https://flydeemon.github.io//about/index.html&via=John Doe" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=vue-cli test&url=https://flydeemon.github.io//2017/08/25/vue-cli-test/index.html&via=John Doe" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -321,7 +356,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://flydeemon.github.io//about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://flydeemon.github.io//2017/08/25/vue-cli-test/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -330,7 +365,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://flydeemon.github.io//about/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://flydeemon.github.io//2017/08/25/vue-cli-test/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -354,7 +389,27 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><h1 id="sssss"><a href="#sssss" class="headerlink" title="sssss"></a>sssss</h1>
+        <h1 id="关于-vue-cli-e2e-和-unit-测试报错的问题"><a href="#关于-vue-cli-e2e-和-unit-测试报错的问题" class="headerlink" title="关于 vue-cli e2e 和 unit 测试报错的问题"></a>关于 vue-cli e2e 和 unit 测试报错的问题</h1><ol>
+<li><code>npm run e2e</code> 报错</li>
+</ol>
+<p>发现 <code>Error retrieving a new session from the selenium server</code> 的错误</p>
+<ul>
+<li>解决办法</li>
+</ul>
+<p>更新 chromedriver, selenium-server</p>
+<p><code>npm install --save-dev chromedriver selenium-server</code></p>
+<ol>
+<li><code>npm run unit</code> 报错</li>
+</ol>
+<p>发现类似这样的错误</p>
+<p>` WARN [plugin]: Error during loading “karma-phantomjs-launcher” plugin:<br>    Path must be a string. Received null<br>…</p>
+<p>WARN [launcher]: Can not load “PhantomJS”, it is not registered!<br>    Perhaps you are missing some plugin? `</p>
+<ul>
+<li>解决办法</li>
+</ul>
+<p>安装 phantomjs-prebuilt</p>
+<p><code>npm install --save-dev phantomjs-prebuilt</code></p>
+
     
 
     
@@ -382,6 +437,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/08/16/vue-cli-eslint/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -566,6 +629,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

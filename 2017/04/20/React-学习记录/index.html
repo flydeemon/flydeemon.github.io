@@ -304,6 +304,15 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1ElEQVR42u3aW07sQAwFwNn/prm/SHAzx3YDSXflC4Uo42okPH68Po68XtjY2NjY2NjY2Ni3ZL/i6+vzn+988zGX95P3JDEkMWNjY2OfwH7zr/8yoB44ec//3tmMGRsbG/sAdjW15GHlyayaGgsxY2NjY2NfPl9NNtdJqBcDNjY2NnbOriakpJhJmkfY2NjY2POmUt7c6RU21ST6S700bGxs7Nuzq4PeO/z8B/NtbGxs7Fuyq1evRMlHAvk4uRw5NjY29qbs+TA1v1/93GrqWlCBYWNjYz+QnSeV/E51+bL3tqSBhY2NjX0Ce+1w9zdTYJ4UsbGxsU9g57xew6hK7UX4psjBxsbGPoDd+6LfK1F6qzn5QueyTSVsbGzs27OrRzBPXUmDqTpmiP542NjY2Juy88FAtbmTkOZlTGEBCBsbG3trdpLMrhnVdn8+DKimQGxsbOzT2D1wtc2UDwB+MCpsbGzsTdl5a74aymQwkMRQjRwbGxv7BHavSTQpJJKEtCoRYmNjY+/NToIbNXSKh5I/kyRCbGxs7L3Z1VFBDpuvWk6SJTY2NvY57HxBZ7K4k7efrtv9ScpsNpWwsbGxH87OG/HzwUB1YNxb08TGxsY+h91LGL0R7KTISQ7rTfsJGxsbe2t2Xk5Ui4FVpU5yfNjY2NhnspMv+vlv80NMxgbVIfSy8QA2Njb2o9jzgqS3vpOXHMuSHDY2NvYx7Gq7v5rq8gFwjly2fImNjY39QPZkMFBdypwjJwMMbGxs7F3Z1Stftakex/UR9MoPbGxs7BPYr/hKAkpSXVII5cUGNjY2NnYvoHyU2yszVpU62NjY2Kex1358de2y9/48ZWJjY2Nj58VDdWCcJLlqhNjY2NjYeegT5BxcKKiwsbGxD2BPGvf5omQVU05U+fIlNjY29kbsSbMmT2zzdlVezIx2TrGxsbEfxT7nwsbGxsbGxsbGxr7N9Q9f+87hUgb1/AAAAABJRU5ErkJggg==">
+        </ul>
+    
 
     <!-- Tags (bookmark) -->
     
@@ -533,7 +542,7 @@ webpack-dev-server --content-base --inline --hot 实时编译，浏览器地址 
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -551,7 +560,7 @@ webpack-dev-server --content-base --inline --hot 实时编译，浏览器地址 
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/react/">react<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/react/">react<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -575,7 +584,7 @@ webpack-dev-server --content-base --inline --hot 实时编译，浏览器地址 
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">5</span>
+                <span class="sidebar-badge">6</span>
             </a>
         </li>
         
@@ -764,6 +773,8 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 
+
+    <script src="/js/smoothscroll.js"></script>
 
 
 

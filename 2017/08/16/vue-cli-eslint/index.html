@@ -304,6 +304,15 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3UlEQVR42u3aUVLjMBAE0Nz/0ssBtuJ0jwwY6ekrBcTWEx9TM63XvyPXCxsbGxsbGxsbG/uR7Fe8iheMvnX9hP8/t3vGxsbG3pudbOL65+9emX/OGbM9Y2NjY5/Azrfefiv5ybvftsUMGxsbG7stQh8agNHWk2diY2NjY6+z88HQ7BCTUoeNjY2N3Q5o1luU6wgh+ctfmKVhY2NjP549G83/7ucfzbexsbGxH8xeuUyTXM15jda9F4CwsbGx92bnhSG/ypM3G+tPLv4B2NjY2Mew18tbPnJK/rK9APT2KLGxsbE3Zefbui421/FAO+hPnlkfHDY2NvYB7PUA+MOlmTJ+yA+9DnqxsbGxt2Ovl6I2mp0dX1LS6qAXGxsbeyN2G6+2zUZeimZDpRvybWxsbOyN2HeVpfZiZdu0FMUVGxsbe2t2exUyaUjuukzZPmcY9GJjY2P/cXY7mn/FKzmyZEh0Q1HExsbG3pQ9iwRma9b8tOOqqIBhY2Njb8TOjyBvNtorQfmR5e+6Ld/GxsbGfjw7f03eZuRxbH58ebsybEWwsbGx/yw7LzAr282LYhsJFDvBxsbG3pqdF4b8Es/KQL+Nh6MWBRsbG3trdh675uwZYz1ULmZp2NjY2Fuw8zYjL0t50zI7oPaZ2NjY2HuzV67vrDQzbdw7a4SwsbGxT2DnbcasyOXbnY2ZilAZGxsbe2v2h8H6aIhfjHsWythtHRg2Njb2Fuz2ZQlyPU7Om40P5Q0bGxv7GHa+0TzuXTnQlbgXGxsb+wR2u5Li0Y5+2jKW/xYbGxv7BPZdxaYND74jNqjrNjY2NvZG7Fk8kFyaaQteWziLEAIbGxv7AHZ7Eefeq5ZtQU2+i42NjY3dXtNJXr/ehLTtDTY2NjZ2GwbPQoK71g8VMGxsbOxHsmdhbQ5u8XlQsVTAsLGxsbdgzwY37cGtxAztt7CxsbHPYZ+zsLGxsbGxsbGxsR+zvgD4vprd3QN0aAAAAABJRU5ErkJggg==">
+        </ul>
+    
 
     <!-- Tags (bookmark) -->
     
@@ -416,6 +425,14 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2017/08/25/vue-cli-test/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
@@ -514,7 +531,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -532,7 +549,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/react/">react<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/react/">react<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -556,7 +573,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">5</span>
+                <span class="sidebar-badge">6</span>
             </a>
         </li>
         
@@ -745,6 +762,8 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 
+
+    <script src="/js/smoothscroll.js"></script>
 
 
 
