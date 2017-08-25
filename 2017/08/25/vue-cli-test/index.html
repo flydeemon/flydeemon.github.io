@@ -10,7 +10,7 @@
     
     <title>
         
-            vue-cli test | 
+            vue-cli 测试报错 | 
         
         flydeemon
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://flydeemon.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="vue-cli test | flydeemon">
+    <meta property="og:title" content="vue-cli 测试报错 | flydeemon">
     <meta property="og:description" content="null">
     
 
@@ -270,7 +270,7 @@
         
     
             <p class="article-headline-p">
-                vue-cli test
+                vue-cli 测试报错
             </p>
         </div>
 
@@ -338,7 +338,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=vue-cli test&url=https://flydeemon.github.io//2017/08/25/vue-cli-test/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=vue-cli 测试报错&url=https://flydeemon.github.io//2017/08/25/vue-cli-test/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -347,7 +347,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=vue-cli test&url=https://flydeemon.github.io//2017/08/25/vue-cli-test/index.html&via=John Doe" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=vue-cli 测试报错&url=https://flydeemon.github.io//2017/08/25/vue-cli-test/index.html&via=John Doe" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -389,25 +389,23 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="关于-vue-cli-e2e-和-unit-测试报错的问题"><a href="#关于-vue-cli-e2e-和-unit-测试报错的问题" class="headerlink" title="关于 vue-cli e2e 和 unit 测试报错的问题"></a>关于 vue-cli e2e 和 unit 测试报错的问题</h1><ol>
-<li><code>npm run e2e</code> 报错</li>
-</ol>
-<p>发现 <code>Error retrieving a new session from the selenium server</code> 的错误</p>
+        <h1 id="关于-vue-cli-e2e-和-unit-测试报错的问题"><a href="#关于-vue-cli-e2e-和-unit-测试报错的问题" class="headerlink" title="关于 vue-cli e2e 和 unit 测试报错的问题"></a>关于 vue-cli e2e 和 unit 测试报错的问题</h1><p>1.<code>npm run e2e</code> 报错</p>
 <ul>
-<li>解决办法</li>
+<li>发现 <code>Error retrieving a new session from the selenium server</code> 的错误</li>
 </ul>
-<p>更新 chromedriver, selenium-server</p>
+<ul>
+<li>解决办法: 更新 chromedriver, selenium-server</li>
+</ul>
 <p><code>npm install --save-dev chromedriver selenium-server</code></p>
-<ol>
-<li><code>npm run unit</code> 报错</li>
-</ol>
-<p>发现类似这样的错误</p>
-<p>` WARN [plugin]: Error during loading “karma-phantomjs-launcher” plugin:<br>    Path must be a string. Received null<br>…</p>
-<p>WARN [launcher]: Can not load “PhantomJS”, it is not registered!<br>    Perhaps you are missing some plugin? `</p>
+<hr>
+<p>2.<code>npm run unit</code> 报错</p>
 <ul>
-<li>解决办法</li>
+<li>发现类似这样的错误</li>
 </ul>
-<p>安装 phantomjs-prebuilt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">WARN [plugin]: Error during loading &quot;karma-phantomjs-launcher&quot; plugin:</div><div class="line">	Path must be a string. Received null</div><div class="line">...</div><div class="line"></div><div class="line">WARN [launcher]: Can not load &quot;PhantomJS&quot;, it is not registered!</div><div class="line">	Perhaps you are missing some plugin?</div></pre></td></tr></table></figure>
+<ul>
+<li>解决办法: 安装 phantomjs-prebuilt</li>
+</ul>
 <p><code>npm install --save-dev phantomjs-prebuilt</code></p>
 
     
