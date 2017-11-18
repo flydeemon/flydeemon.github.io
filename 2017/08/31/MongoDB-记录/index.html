@@ -10,7 +10,7 @@
     
     <title>
         
-            归档: 2017/4 | 
+            MongoDB 记录 | 
         
         flydeemon
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://flydeemon.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/4 | flydeemon">
+    <meta property="og:title" content="MongoDB 记录 | flydeemon">
     <meta property="og:description" content="null">
     
 
@@ -208,150 +208,251 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#mongoDB-记录"><span class="post-toc-number">1.</span> <span class="post-toc-text">mongoDB 记录</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/20/Web-离线缓存/">Web 离线缓存</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/20/Web-离线缓存/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Doe's avatar">
-            </div>
-            <div>
-                <strong>John Doe</strong>
-                <span>4月 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Web/">Web</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/20/React-学习记录/">React 学习记录</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            一、环境搭...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/20/React-学习记录/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Doe's avatar">
-            </div>
-            <div>
-                <strong>John Doe</strong>
-                <span>4月 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/react/">react</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                MongoDB 记录
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>John Doe</strong>
+        <span>8月 31, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACyklEQVR42u3aQXLjMAwEQP//09kXyDVD0FmHbJ5SVkSheUEB4OvnyvXCxsbGxsbGxsbG/kr2K15Pbz39MgrxYf9RzNjY2NhHs5Mg3gf3Pqyn0NcYazFjY2Nj38DOw81Def8/ydNd8WBjY2Njfy4JrRVC2NjY2Ni7EtjaAeVfX3sLGxsb+0520qDJBwaT3/NRwS/10rCxsbG/nj0pIf7X378638bGxsb+YvbkMs1aKPPrQRsuX2JjY2MfxM5Db0Np20N5gZTHiY2NjX0ze9eFm3bnXU0obGxs7NvYLThp5b8vV5Kdk4KnODhsbGzsQ9l50Hn7vj2UZJ88UUWDXmxsbOyD2PkVmfwgdu2QP13M29jY2NhHsNfwbfGQ79Cmw1HexsbGxj6CnQxK2yZR26iaFC2jvI2NjY19EDs/iLbdv3bdJz+CDfNtbGxs7KPZa7/kxUabAvM9sbGxsW9jt+PVtbHuT7za4iS6BoSNjY19KDtp9+SNoSR1JcmsJiUlCjY2Nvah7LZZkx9EPo5dKznaMTA2Njb2Dew8tbSt/3aQ0O4THRw2Njb2Nez5hyfFzNp4OGlaYWNjY5/Nbi/lTNr38zFDe9DY2NjY97Dng4E5fteBFgkMGxsb+4+zoxfi8iMfzbbHlw8qivk2NjY29hHsXZdyog8PWktJO2nzVAQbGxv7T7HzxLCWftrjSN6qh83Y2NjY17A/MdBNmkSTEigaFWNjY2Nfwy4a7mUQbatoLUFiY2Nj38ZuVzKUnVzKSdJY/hQbGxv7BvZaG2heKnxibLA46MXGxsY+gt0mreJjwf5t4tyWwLCxsbGPY7ftofbqTDtUXmskPX4dGxsbGzs+gjy1TIqNPGZsbGxs7MnAtU1yu4YW2NjY2Hey24bOZCQw33lbAsPGxsY+gr2tcVOOhOskFF/ZxMbGxr6Hfc/CxsbGxsbGxsbG/pr1D+8duGsCbmaYAAAAAElFTkSuQmCC">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MongoDB 记录&url=https://flydeemon.github.io//2017/08/31/MongoDB-记录/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MongoDB 记录&url=https://flydeemon.github.io//2017/08/31/MongoDB-记录/index.html&via=John Doe" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://flydeemon.github.io//2017/08/31/MongoDB-记录/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://flydeemon.github.io//2017/08/31/MongoDB-记录/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="mongoDB-记录"><a href="#mongoDB-记录" class="headerlink" title="mongoDB 记录"></a>mongoDB 记录</h1><ol>
+<li>开启你的 mongodb 服务</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mongod -dbpath &quot;D:\Program Files\MongoDB\data\db&quot; 数据库路径</div><div class="line">-logpath &quot;D:\Program Files\MongoDB\data\log\MongoDB.log&quot; log的路径 </div><div class="line">-logappend 追加文件</div><div class="line">-serviceName &quot;MongoDB&quot; 服务名</div><div class="line">-auth 是否需要用户验证</div><div class="line">-install 安装服务</div></pre></td></tr></table></figure>
+<ol>
+<li>连接 mongodb</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">shell&gt; mongo  默认链接本地数据库</div><div class="line"></div><div class="line">shell&gt; mongo://user:pwd@host:port/db 连接远程数据库</div></pre></td></tr></table></figure>
+<ol>
+<li>mongoose.model 默认会帮你的集合名加复数形式(s)，所以你必须正确让 mongoose 认识你指定的集合名</li>
+</ol>
+<p><code>new Schama({}, {collection: &#39;你的集合名&#39;})</code></p>
+<p>or</p>
+<p><code>schema.set(&#39;collection&#39;, &#39;actor&#39;)</code></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/08/31/Node-记录/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/08/25/vue-cli-test/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
