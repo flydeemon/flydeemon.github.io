@@ -389,17 +389,17 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="mongoDB-记录"><a href="#mongoDB-记录" class="headerlink" title="mongoDB 记录"></a>mongoDB 记录</h1><ol>
-<li>开启你的 mongodb 服务</li>
-</ol>
+        <h1 id="mongoDB-记录"><a href="#mongoDB-记录" class="headerlink" title="mongoDB 记录"></a>mongoDB 记录</h1><ul>
+<li>1.开启你的 mongodb 服务</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mongod -dbpath &quot;D:\Program Files\MongoDB\data\db&quot; 数据库路径</div><div class="line">-logpath &quot;D:\Program Files\MongoDB\data\log\MongoDB.log&quot; log的路径 </div><div class="line">-logappend 追加文件</div><div class="line">-serviceName &quot;MongoDB&quot; 服务名</div><div class="line">-auth 是否需要用户验证</div><div class="line">-install 安装服务</div></pre></td></tr></table></figure>
-<ol>
-<li>连接 mongodb</li>
-</ol>
+<ul>
+<li>2.连接 mongodb</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">shell&gt; mongo  默认链接本地数据库</div><div class="line"></div><div class="line">shell&gt; mongo://user:pwd@host:port/db 连接远程数据库</div></pre></td></tr></table></figure>
-<ol>
-<li>mongoose.model 默认会帮你的集合名加复数形式(s)，所以你必须正确让 mongoose 认识你指定的集合名</li>
-</ol>
+<ul>
+<li>3.mongoose.model 默认会帮你的集合名加复数形式(s)，所以你必须正确让 mongoose 认识你指定的集合名</li>
+</ul>
 <p><code>new Schama({}, {collection: &#39;你的集合名&#39;})</code></p>
 <p>or</p>
 <p><code>schema.set(&#39;collection&#39;, &#39;actor&#39;)</code></p>
