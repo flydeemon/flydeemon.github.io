@@ -14,8 +14,8 @@
 </ul>
 <h1 id="二、助动词的分类、含义、用法"><a href="#二、助动词的分类、含义、用法" class="headerlink" title="二、助动词的分类、含义、用法"></a>二、助动词的分类、含义、用法</h1><h2 id="do-类助动词："><a href="#do-类助动词：" class="headerlink" title="do 类助动词："></a>do 类助动词：</h2><ul>
 <li>【成员】do，does，did</li>
-<li>【含义】表示“一般”“现在”“过去”等含义，此外did， 还用来表示“虚拟”含义</li>
-<li>【用法】do 类助词在陈述句中，往往和“实义动词”黏在一起，表示相应的时态含义 </li>
+<li>【含义】表示“一般”“现在”“过去”等含义，此外 did， 还用来表示“虚拟”含义</li>
+<li>【用法】do 类助词在陈述句中，往往和“实义动词”黏在一起，表示相应的时态含义</li>
 </ul>
 <h2 id="will-类助动词："><a href="#will-类助动词：" class="headerlink" title="will 类助动词："></a>will 类助动词：</h2><ul>
 <li>【成员】will，would</li>
@@ -53,8 +53,8 @@
 <li>表达强烈情感“总是”</li>
 </ol>
 <ul>
-<li>现在完成进行时：一个动作到现在“进行了一段时间”或“已经做了一段时间而且还在做”</li>
-<li>过去完成进行时：一个动作倒过去某一时间点为止“进行了一段时间”或“已经做了一段时间而且还在做”</li>
+<li>现在完成进行时：一个动作到现在“进行了一段时间”或“已经做了一段时间而且还在做”，<br>  它的主要用法与现在完成时的“未完成”用法相仿</li>
+<li>过去完成进行时：一个动作倒过去某一时间点为止“进行了一段时间”或“已经做了一段时间而且还在做”，<br>  现在已经终止了</li>
 <li>一般将来时：</li>
 </ul>
 <ol>
@@ -67,13 +67,20 @@
 <li>“位移动词”用现在进行时表将来<br> come; go; leave; arrive; begin; start; die</li>
 <li>“时间从句、条件从句”的“主将从现”/“主情从现”/“主祈从现”</li>
 </ol>
+<h2 id="将来完成进行时-与-将来完成时-的区别"><a href="#将来完成进行时-与-将来完成时-的区别" class="headerlink" title="将来完成进行时 与 将来完成时 的区别"></a>将来完成进行时 与 将来完成时 的区别</h2><ol>
+<li>将来完成进行时强调动作过程在另一动词之前的长度</li>
+<li>将来完成时更强调在另一件事前一个动作的完成</li>
+</ol>
+<p>By the time John retires, James will have been practicing for 10 years.</p>
+<p>到约翰退休的时候，詹姆斯已经在从事工作10年了。<br>与这个句子有所区别：</p>
+<p>Before the time John retires, James would have retired.</p>
 <h2 id="【虚拟语气十大常见考点】"><a href="#【虚拟语气十大常见考点】" class="headerlink" title="【虚拟语气十大常见考点】"></a>【虚拟语气十大常见考点】</h2><ol>
 <li>But for + sth， + 主语 + 谓语虚拟<br> (要不是…)</li>
 <li>Without + sth， + 主语 + 谓语虚拟<br> （要不是没有…）</li>
 <li>If only + 主语 + 谓语虚拟<br> （要是…就好了！）</li>
 <li>Would you mind + 主语 + 谓语虚拟<br> （您介不介意某人做某事？）</li>
 <li>主句 + as if/as though + 主语 + 谓语虚拟<br> （就好像某人做了/要做某事）</li>
-<li>主语A would rather + 主语B + 谓语虚拟<br> （宁愿、真希望…） </li>
+<li>主语A would rather + 主语B + 谓语虚拟<br> （宁愿、真希望…）</li>
 <li>It’s high time that sb did/should do sth.<br> （到了某人做某事的时间了）</li>
 <li>It is necessary that sb (should) do sth.<br> （某人真的有必要做某事）</li>
 <li>It is + strange/surprising that sb should（竟然） do sth.<br> （真奇怪，他竟然…）</li>
@@ -108,6 +115,12 @@
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> English </tag>
+            
+        </tags>
         
     </entry>
     
@@ -395,7 +408,8 @@ webpack-dev-server --content-base --inline --hot 实时编译，浏览器地址 
     <entry>
       <title><![CDATA[Hello World]]></title>
       <url>https://flydeemon.github.io/2017/03/11/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+      <content type="html"><![CDATA[<p>$$E=mc^2$$</p>
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
