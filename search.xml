@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title><![CDATA[git 记录]]></title>
+      <url>https://flydeemon.github.io/2018/03/07/git-%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<h1 id="Git-服务器安装"><a href="#Git-服务器安装" class="headerlink" title="Git 服务器安装"></a>Git 服务器安装</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">yum install git -y</div><div class="line">useradd git</div><div class="line">passwd git</div><div class="line"></div><div class="line">cd /var</div><div class="line">mkdir www</div><div class="line">chown -R git:git /var/www</div><div class="line">chmod 774 /var/www</div><div class="line">cd www</div><div class="line">git init --bare demo.git</div></pre></td></tr></table></figure>
+<h3 id="禁用-git-用户-shell-登录"><a href="#禁用-git-用户-shell-登录" class="headerlink" title="禁用 git 用户 shell 登录"></a>禁用 git 用户 shell 登录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">vim /etc/passwd</div><div class="line"></div><div class="line">git:x:1000:1000::/home/git:/usr/bin/git-shell</div></pre></td></tr></table></figure>
+<h3 id="公钥"><a href="#公钥" class="headerlink" title="公钥"></a>公钥</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd /home/git</div><div class="line">mkdir .ssh</div><div class="line">chown -R git:git .ssh</div><div class="line">touch .ssh/authorized_keys</div><div class="line"></div><div class="line">// 加入公钥</div><div class="line">vim .ssh/authorized_keys</div><div class="line"></div><div class="line">chmod 700 .ssh</div><div class="line">chmod 600 .ssh/authorized_keys</div></pre></td></tr></table></figure>
+<h3 id="自动同步到站点目录"><a href="#自动同步到站点目录" class="headerlink" title="自动同步到站点目录"></a>自动同步到站点目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd /var/www/demo.git/hooks</div><div class="line">vim post-receive</div><div class="line">chown git:git post-receive</div><div class="line">chmod +x post-receive</div></pre></td></tr></table></figure>
+<p>post-receive 文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">git --work-tree=/var/www chckout -f</div></pre></td></tr></table></figure>
+<h3 id="git-客户端"><a href="#git-客户端" class="headerlink" title="git 客户端"></a>git 客户端</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">git clone git@host:/var/www/demo.git</div><div class="line"></div><div class="line">git add .</div><div class="line">git commit -m &quot;&quot;</div><div class="line">git push</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> git </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[谓语动词]]></title>
       <url>https://flydeemon.github.io/2017/11/18/%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D/</url>
       <content type="html"><![CDATA[<h1 id="一、谓语动词的的四大“变态”含义"><a href="#一、谓语动词的的四大“变态”含义" class="headerlink" title="一、谓语动词的的四大“变态”含义"></a>一、谓语动词的的四大“变态”含义</h1><ul>
@@ -67,12 +93,13 @@
 <li>“位移动词”用现在进行时表将来<br> come; go; leave; arrive; begin; start; die</li>
 <li>“时间从句、条件从句”的“主将从现”/“主情从现”/“主祈从现”</li>
 </ol>
-<h2 id="将来完成进行时-与-将来完成时-的区别"><a href="#将来完成进行时-与-将来完成时-的区别" class="headerlink" title="将来完成进行时 与 将来完成时 的区别"></a>将来完成进行时 与 将来完成时 的区别</h2><ol>
+<h2 id="将来完成进行时-与-将来完成时-的区别"><a href="#将来完成进行时-与-将来完成时-的区别" class="headerlink" title="将来完成进行时 与 将来完成时 的区别"></a>将来完成进行时 与 将来完成时 的区别</h2><ul>
 <li>将来完成进行时强调动作过程在另一动词之前的长度</li>
 <li>将来完成时更强调在另一件事前一个动作的完成</li>
-</ol>
+</ul>
 <p>By the time John retires, James will have been practicing for 10 years.</p>
-<p>到约翰退休的时候，詹姆斯已经在从事工作10年了。<br>与这个句子有所区别：</p>
+<p>到约翰退休的时候，詹姆斯已经在从事工作10年了。</p>
+<p>与这个句子有所区别：</p>
 <p>Before the time John retires, James would have retired.</p>
 <h2 id="【虚拟语气十大常见考点】"><a href="#【虚拟语气十大常见考点】" class="headerlink" title="【虚拟语气十大常见考点】"></a>【虚拟语气十大常见考点】</h2><ol>
 <li>But for + sth， + 主语 + 谓语虚拟<br> (要不是…)</li>
@@ -128,10 +155,10 @@
       <title><![CDATA[vue-热更新问题]]></title>
       <url>https://flydeemon.github.io/2017/09/05/vue-%E7%83%AD%E6%9B%B4%E6%96%B0%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<p>最近调试 vue 项目遇到一个热更新的问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">HMR] Update check failed: Error: Manifest request to </div><div class="line">/0ca55ad0f6c9c867e01c.hot-update.json timed out. </div><div class="line">at XMLHttpRequest.request.onreadystatechange </div><div class="line">(http://localhost:8080/app.js:39:22)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">HMR] Update check failed: Error: Manifest request to </div><div class="line">/0ca55ad0f6c9c867e01c.hot-update.json timed out. </div><div class="line">at XMLHttpRequest.request.onreadystatechange </div><div class="line">(http://localhost:8080/app.js:39:22)</div></pre></td></tr></table></figure>
 <p>这个问题是 webpack 更新版本导致的<br>webpack-dev-middleware: ^1.12.0 此模板没有Webpack 3的官方支持<br>所以要返回 “webpack-dev-middleware”: “~1.11.0”</p>
 <p>并且注释</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+// compiler.plugin(&apos;compilation&apos;, function (compilation) &#123;</div><div class="line"> +//   compilation.plugin(&apos;html-webpack-plugin-after-emit&apos;, function (data, cb) &#123;</div><div class="line"> +//     hotMiddleware.publish(&#123; action: &apos;reload&apos; &#125;)</div><div class="line"> +//     cb()</div><div class="line"> +//   &#125;)</div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">+// compiler.plugin(&apos;compilation&apos;, function (compilation) &#123;</div><div class="line"> +//   compilation.plugin(&apos;html-webpack-plugin-after-emit&apos;, function (data, cb) &#123;</div><div class="line"> +//     hotMiddleware.publish(&#123; action: &apos;reload&apos; &#125;)</div><div class="line"> +//     cb()</div><div class="line"> +//   &#125;)</div></pre></td></tr></table></figure>]]></content>
       
         <categories>
             
@@ -145,8 +172,21 @@
     <entry>
       <title><![CDATA[Node 记录]]></title>
       <url>https://flydeemon.github.io/2017/08/31/Node-%E8%AE%B0%E5%BD%95/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p>当你定义的CSS中有position属性值为absolute、relative或fixed，<br>用z-index此取值方可生效。</p>
+<h1 id="CentOS7-安装-node-js-8-9-4"><a href="#CentOS7-安装-node-js-8-9-4" class="headerlink" title="CentOS7 安装 node.js 8.9.4"></a>CentOS7 安装 node.js 8.9.4</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">wget http://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.gz  </div><div class="line">tar zxvf node-v8.9.4-linux-x64.tar.gz</div><div class="line">mv node-v8.9.4-linux-x64 /usr/local/</div><div class="line">mv /usr/local/node-v8.9.4-linux-x64/ /usr/local/node</div><div class="line"></div><div class="line">vim /etc/profile</div><div class="line"># nodejs</div><div class="line">export NODE_HOME=/usr/local/node</div><div class="line">export PATH=$NODE_HOME/bin:$PATH</div></pre></td></tr></table></figure>]]></content>
       
+        <categories>
+            
+            <category> Node </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Node </tag>
+            
+        </tags>
         
     </entry>
     
@@ -154,14 +194,21 @@
       <title><![CDATA[MongoDB 记录]]></title>
       <url>https://flydeemon.github.io/2017/08/31/MongoDB-%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<h1 id="mongoDB-记录"><a href="#mongoDB-记录" class="headerlink" title="mongoDB 记录"></a>mongoDB 记录</h1><p>1.开启你的 mongodb 服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mongod -dbpath &quot;D:\Program Files\MongoDB\data\db&quot; 数据库路径</div><div class="line">-logpath &quot;D:\Program Files\MongoDB\data\log\MongoDB.log&quot; log的路径 </div><div class="line">-logappend 追加文件</div><div class="line">-serviceName &quot;MongoDB&quot; 服务名</div><div class="line">-auth 是否需要用户验证</div><div class="line">-install 安装服务</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">mongod -dbpath &quot;D:\Program Files\MongoDB\data\db&quot; 数据库路径</div><div class="line">-logpath &quot;D:\Program Files\MongoDB\data\log\MongoDB.log&quot; log的路径 </div><div class="line">-logappend 追加文件</div><div class="line">-serviceName &quot;MongoDB&quot; 服务名</div><div class="line">-auth 是否需要用户验证</div><div class="line">-install 安装服务</div></pre></td></tr></table></figure>
 <p>2.连接 mongodb</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">shell&gt; mongo  默认链接本地数据库</div><div class="line"></div><div class="line">shell&gt; mongo://user:pwd@host:port/db 连接远程数据库</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">shell&gt; mongo  默认链接本地数据库</div><div class="line"></div><div class="line">shell&gt; mongo://user:pwd@host:port/db 连接远程数据库</div></pre></td></tr></table></figure>
 <p>3.mongoose.model 默认会帮你的集合名加复数形式(s)，所以你必须正确让 mongoose 认识你指定的集合名</p>
 <p><code>new Schama({}, {collection: &#39;你的集合名&#39;})</code></p>
 <p>or</p>
 <p><code>schema.set(&#39;collection&#39;, &#39;actor&#39;)</code></p>
-]]></content>
+<h1 id="CentOS7-下安装-Mongodb-3-6-3"><a href="#CentOS7-下安装-Mongodb-3-6-3" class="headerlink" title="CentOS7 下安装 Mongodb 3.6.3"></a>CentOS7 下安装 Mongodb 3.6.3</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">// 1.下载解压</div><div class="line">wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.6.3.tgz</div><div class="line">tar-zxvf zxvf mongodb-linux-x86_64-3.6.3.tgz</div><div class="line"></div><div class="line">// 2.移动到 /usr/local/下</div><div class="line">rm -f mongodb-linux-x86_64-3.6.3.tgz</div><div class="line">mv mongodb-linux-x86_64-3.6.3 /usr/local/mongodb</div><div class="line">cd /usr/local/mongodb</div><div class="line"></div><div class="line">// 3.建立数据库存储路径和配置文件</div><div class="line">mkdir data</div><div class="line">mkdir data/db</div><div class="line">mkdir data/logs</div><div class="line">vim mongod.conf</div></pre></td></tr></table></figure>
+<p>设置环境变量<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">vim /etc/profile</div><div class="line"># mongodb</div><div class="line">export MONGODB_HOME=/usr/local/mongodb</div><div class="line">export PATH=$MONGODB_HOME/bin:$PATH</div></pre></td></tr></table></figure></p>
+<p>配置文件<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">dbpath=/usr/local/mongodb/data/db</div><div class="line">logpath=/usr/local/mongodb/data/logs/mongodb.log #这个要指定文件</div><div class="line">fork=true</div><div class="line">logappend=true #日志追加</div><div class="line">port=27017</div><div class="line"># auth=true 先注释掉</div></pre></td></tr></table></figure></p>
+<p>设置为服务必须在linux的/etc/init.d/下建立一个mongod的初始化启动文件<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd /etc/init.d/</div><div class="line">touch mongod</div><div class="line">chmod +x mongod</div><div class="line">vim mongod</div><div class="line"></div><div class="line">// 添加服务</div><div class="line">chkconfig --add mongod</div><div class="line">chkconfig mongod on</div><div class="line">service mongod start</div></pre></td></tr></table></figure></p>
+<p>启动文件<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#!/bin/bash  </div><div class="line">#chkconfig: 2345 80 90  </div><div class="line">#description: mongodb  </div><div class="line">start() &#123;  </div><div class="line">	/usr/local/mongodb/bin/mongod -f /usr/local/mongodb/mongod.conf  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line">stop() &#123;  </div><div class="line">    /usr/local/mongodb/bin/mongod -f /usr/local/mongodb/mongod.conf --shutdown  </div><div class="line">&#125;  </div><div class="line">case &quot;$1&quot; in  </div><div class="line">  start)  </div><div class="line"> start  </div><div class="line"> ;;  </div><div class="line">  </div><div class="line">stop)  </div><div class="line"> stop  </div><div class="line"> ;;  </div><div class="line">  </div><div class="line">restart)  </div><div class="line"> stop  </div><div class="line"> start  </div><div class="line"> ;;  </div><div class="line">  *)  </div><div class="line"> echo  </div><div class="line">$&quot;Usage: $0 &#123;start|stop|restart&#125;&quot;  </div><div class="line"> exit 1  </div><div class="line">esac</div></pre></td></tr></table></figure></p>
+<h1 id="Mongodb-登录授权"><a href="#Mongodb-登录授权" class="headerlink" title="Mongodb 登录授权"></a>Mongodb 登录授权</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">use admin</div><div class="line">db.createUser(&#123;user:&quot;master&quot;,pwd:&quot;master&quot;,roles:[&#123;&quot;role&quot;:&quot;userAdminAnyDatabase&quot;,&quot;db&quot;:&quot;admin&quot;&#125;]&#125;)</div><div class="line"></div><div class="line">// 退出 mongo 停止 mongod 服务</div><div class="line">// 修改 mongod.conf 使用 bind_ip=0.0.0.0 auth=true</div><div class="line">// 重启 mongod 服务</div><div class="line"></div><div class="line">use admin</div><div class="line">db.auth(&apos;master&apos;,&apos;master&apos;) </div><div class="line">use test</div><div class="line">db.createUser(&#123;user:&quot;demo&quot;,pwd:&quot;demo&quot;,roles:[&#123;&quot;role&quot;:&quot;readWrite&quot;,&quot;db&quot;:&quot;test&quot;&#125;]&#125;)</div><div class="line">db.auth(&apos;demo&apos;, &apos;demo&apos;)</div></pre></td></tr></table></figure>
+<p>最后是远程连接</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">mongo host:port/db -u user -p pwd</div></pre></td></tr></table></figure>]]></content>
       
         <categories>
             
@@ -188,7 +235,7 @@
 <ul>
 <li>发现类似这样的错误</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">WARN [plugin]: Error during loading &quot;karma-phantomjs-launcher&quot; plugin:</div><div class="line">	Path must be a string. Received null</div><div class="line">...</div><div class="line"></div><div class="line">WARN [launcher]: Can not load &quot;PhantomJS&quot;, it is not registered!</div><div class="line">	Perhaps you are missing some plugin?</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">WARN [plugin]: Error during loading &quot;karma-phantomjs-launcher&quot; plugin:</div><div class="line">	Path must be a string. Received null</div><div class="line">...</div><div class="line"></div><div class="line">WARN [launcher]: Can not load &quot;PhantomJS&quot;, it is not registered!</div><div class="line">	Perhaps you are missing some plugin?</div></pre></td></tr></table></figure>
 <ul>
 <li>解决办法: 安装 phantomjs-prebuilt</li>
 </ul>
@@ -380,7 +427,7 @@ webpack-dev-server --content-base --inline --hot 实时编译，浏览器地址 
       <url>https://flydeemon.github.io/2017/03/12/%E6%96%87%E7%AB%A0/</url>
       <content type="html"><![CDATA[<h1 id="警告：需要安装-prop-types-package"><a href="#警告：需要安装-prop-types-package" class="headerlink" title="警告：需要安装 prop-types package"></a>警告：需要安装 prop-types package</h1><p>这个是 React 的问题，最近官方更新 React 15.5.0 之后的版本都将弃用 React.PropTypes。<br>所以会提示让你安装 prop-types。详情去 React 官方的 release 查看。<br>如果你的项目中使用了第三方库，而那些库还没更新的情况下，最好的解决办法是：安装旧版本的 React 版本。<br>命令： npm install –save react@15.3.2 react-dom@15.3.2</p>
 <p>如果你项目中并没有使用第三方库，那么就更新 React 版本并安装 prop-types 包。<br>命令： npm install –save react prop-types</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//项目中需要引入 prop-types</div><div class="line">import PropTypes from &apos;prop-types&apos;;</div><div class="line"></div><div class="line">const propTypes: &#123;</div><div class="line">    myArray: PropTypes.array,</div><div class="line">    myBool: PropTypes.bool,</div><div class="line">    myFunc: PropTypes.func,</div><div class="line">    myNumber: PropTypes.number,</div><div class="line">    myString: PropTypes.string,</div><div class="line">    requiredFunc: PropTypes.func.isRequired</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">//项目中需要引入 prop-types</div><div class="line">import PropTypes from &apos;prop-types&apos;;</div><div class="line"></div><div class="line">const propTypes: &#123;</div><div class="line">    myArray: PropTypes.array,</div><div class="line">    myBool: PropTypes.bool,</div><div class="line">    myFunc: PropTypes.func,</div><div class="line">    myNumber: PropTypes.number,</div><div class="line">    myString: PropTypes.string,</div><div class="line">    requiredFunc: PropTypes.func.isRequired</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="webpack2-无法自动刷新或报错的问题"><a href="#webpack2-无法自动刷新或报错的问题" class="headerlink" title="webpack2 无法自动刷新或报错的问题"></a>webpack2 无法自动刷新或报错的问题</h1><p>这个其实是路径的问题。嘛，我来慢慢解释下吧。<br>首先，webpack-dev-server 运行的时候，会将编译好的文件存储在内存中，所以你运行这条命令的时候在项目中是找不到这个编译好的文件的。那么问题来了，index.html 中 script 标签是要引入这个编译好的文件的，那该怎么办？（这里我们把编译好的文件定义成: bundle.js）。<br>解决办法：</p>
 <ul>
 <li><p>第一个办法是 index.html 中 script 标签直接从项目的根目录引入 bundle.js 。</p>
@@ -388,7 +435,7 @@ webpack-dev-server --content-base --inline --hot 实时编译，浏览器地址 
 <p>  这里有个前提，你的 index.html 必须在项目根目录下。比如 react_example -&gt; index.html 。</p>
 </li>
 <li><p>第二个办法是在 webpack.config.js 文件中指定 bundle.js 放在哪里。<br>  path：指定编译打包的路径，不是 html 中的 js 引用。<br>  publicPath：在内存中的虚拟目录。html 中引用 js 文件时，必须引用此虚拟路径（但实际上引用的是内存中的文件）。<br>  module.exports.output 中添加 publicPath 属性，该属性指定 bundle.js 文件放在 react_example/assets/ 中。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    path: __dirname + &apos;/assets/&apos;,</div><div class="line">    filename: &apos;bundle.js&apos;,</div><div class="line">    publicPath: &apos;/assets/&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    path: __dirname + &apos;/assets/&apos;,</div><div class="line">    filename: &apos;bundle.js&apos;,</div><div class="line">    publicPath: &apos;/assets/&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>  然后修改index.html 中 script 标签</p>
 <p>  <code>&lt;script src=&quot;assets/bundle.js&quot;&gt;&lt;/script&gt;</code></p>
 </li>
@@ -408,15 +455,16 @@ webpack-dev-server --content-base --inline --hot 实时编译，浏览器地址 
     <entry>
       <title><![CDATA[Hello World]]></title>
       <url>https://flydeemon.github.io/2017/03/11/hello-world/</url>
-      <content type="html"><![CDATA[<p>$$E=mc^2$$</p>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<p>$$E=mc^2$$</p>
+<p>$$<br>\begin{aligned}<br>x_f &amp;= x_0+k(x-x_0) \\<br>    &amp;= y_0+k(y-y_0) \\<br>    &amp;= k<br>\end{aligned}<br>$$  </p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><p><code>hexo new &quot;My New Post&quot;</code></p>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><p><code>hexo server</code></p>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><p><code>$ hexo generate</code></p>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><p><code>$ hexo deploy</code></p>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
       

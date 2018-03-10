@@ -25,7 +25,7 @@
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="FlyDeemon">
     <meta name="description" content="null">
     <meta name="keywords" content="null">
 
@@ -288,7 +288,7 @@
     </div>
     <!-- Author Name & Date -->
     <div>
-        <strong>John Doe</strong>
+        <strong>FlyDeemon</strong>
         <span>3月 12, 2017</span>
     </div>
 
@@ -347,7 +347,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React 开发中遇到的坑&url=https://flydeemon.github.io//2017/03/12/文章/index.html&via=John Doe" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React 开发中遇到的坑&url=https://flydeemon.github.io//2017/03/12/文章/index.html&via=FlyDeemon" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -391,7 +391,7 @@
     
         <h1 id="警告：需要安装-prop-types-package"><a href="#警告：需要安装-prop-types-package" class="headerlink" title="警告：需要安装 prop-types package"></a>警告：需要安装 prop-types package</h1><p>这个是 React 的问题，最近官方更新 React 15.5.0 之后的版本都将弃用 React.PropTypes。<br>所以会提示让你安装 prop-types。详情去 React 官方的 release 查看。<br>如果你的项目中使用了第三方库，而那些库还没更新的情况下，最好的解决办法是：安装旧版本的 React 版本。<br>命令： npm install –save react@15.3.2 react-dom@15.3.2</p>
 <p>如果你项目中并没有使用第三方库，那么就更新 React 版本并安装 prop-types 包。<br>命令： npm install –save react prop-types</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//项目中需要引入 prop-types</div><div class="line">import PropTypes from &apos;prop-types&apos;;</div><div class="line"></div><div class="line">const propTypes: &#123;</div><div class="line">    myArray: PropTypes.array,</div><div class="line">    myBool: PropTypes.bool,</div><div class="line">    myFunc: PropTypes.func,</div><div class="line">    myNumber: PropTypes.number,</div><div class="line">    myString: PropTypes.string,</div><div class="line">    requiredFunc: PropTypes.func.isRequired</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">//项目中需要引入 prop-types</div><div class="line">import PropTypes from &apos;prop-types&apos;;</div><div class="line"></div><div class="line">const propTypes: &#123;</div><div class="line">    myArray: PropTypes.array,</div><div class="line">    myBool: PropTypes.bool,</div><div class="line">    myFunc: PropTypes.func,</div><div class="line">    myNumber: PropTypes.number,</div><div class="line">    myString: PropTypes.string,</div><div class="line">    requiredFunc: PropTypes.func.isRequired</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="webpack2-无法自动刷新或报错的问题"><a href="#webpack2-无法自动刷新或报错的问题" class="headerlink" title="webpack2 无法自动刷新或报错的问题"></a>webpack2 无法自动刷新或报错的问题</h1><p>这个其实是路径的问题。嘛，我来慢慢解释下吧。<br>首先，webpack-dev-server 运行的时候，会将编译好的文件存储在内存中，所以你运行这条命令的时候在项目中是找不到这个编译好的文件的。那么问题来了，index.html 中 script 标签是要引入这个编译好的文件的，那该怎么办？（这里我们把编译好的文件定义成: bundle.js）。<br>解决办法：</p>
 <ul>
 <li><p>第一个办法是 index.html 中 script 标签直接从项目的根目录引入 bundle.js 。</p>
@@ -399,7 +399,7 @@
 <p>  这里有个前提，你的 index.html 必须在项目根目录下。比如 react_example -&gt; index.html 。</p>
 </li>
 <li><p>第二个办法是在 webpack.config.js 文件中指定 bundle.js 放在哪里。<br>  path：指定编译打包的路径，不是 html 中的 js 引用。<br>  publicPath：在内存中的虚拟目录。html 中引用 js 文件时，必须引用此虚拟路径（但实际上引用的是内存中的文件）。<br>  module.exports.output 中添加 publicPath 属性，该属性指定 bundle.js 文件放在 react_example/assets/ 中。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    path: __dirname + &apos;/assets/&apos;,</div><div class="line">    filename: &apos;bundle.js&apos;,</div><div class="line">    publicPath: &apos;/assets/&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    path: __dirname + &apos;/assets/&apos;,</div><div class="line">    filename: &apos;bundle.js&apos;,</div><div class="line">    publicPath: &apos;/assets/&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>  然后修改index.html 中 script 标签</p>
 <p>  <code>&lt;script src=&quot;assets/bundle.js&quot;&gt;&lt;/script&gt;</code></p>
 </li>
@@ -480,7 +480,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="John Doe's avatar">
+        <img src="/img/avatar.png" alt="FlyDeemon's avatar">
     </div>
 
     <!-- Sidebar Email -->
@@ -534,7 +534,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -552,7 +552,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/MongoDB/">MongoDB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/react/">react<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/英语/">英语<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/MongoDB/">MongoDB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node/">Node<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/git/">git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/react/">react<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/英语/">英语<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -576,7 +576,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">10</span>
+                <span class="sidebar-badge">11</span>
             </a>
         </li>
         
@@ -898,7 +898,7 @@ It will not impact the appearance and can give developers a lot of support :)
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+  MathJax.Hub.Config("");
 </script>
 
 <script type="text/x-mathjax-config">
@@ -910,7 +910,7 @@ It will not impact the appearance and can give developers a lot of support :)
   });
 </script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

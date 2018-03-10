@@ -25,7 +25,7 @@
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="FlyDeemon">
     <meta name="description" content="null">
     <meta name="keywords" content="null">
 
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#mongoDB-记录"><span class="post-toc-number">1.</span> <span class="post-toc-text">mongoDB 记录</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#mongoDB-记录"><span class="post-toc-number">1.</span> <span class="post-toc-text">mongoDB 记录</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CentOS7-下安装-Mongodb-3-6-3"><span class="post-toc-number">2.</span> <span class="post-toc-text">CentOS7 下安装 Mongodb 3.6.3</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Mongodb-登录授权"><span class="post-toc-number">3.</span> <span class="post-toc-text">Mongodb 登录授权</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -288,7 +288,7 @@
     </div>
     <!-- Author Name & Date -->
     <div>
-        <strong>John Doe</strong>
+        <strong>FlyDeemon</strong>
         <span>8月 31, 2017</span>
     </div>
 
@@ -347,7 +347,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MongoDB 记录&url=https://flydeemon.github.io//2017/08/31/MongoDB-记录/index.html&via=John Doe" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MongoDB 记录&url=https://flydeemon.github.io//2017/08/31/MongoDB-记录/index.html&via=FlyDeemon" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -390,14 +390,21 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h1 id="mongoDB-记录"><a href="#mongoDB-记录" class="headerlink" title="mongoDB 记录"></a>mongoDB 记录</h1><p>1.开启你的 mongodb 服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mongod -dbpath &quot;D:\Program Files\MongoDB\data\db&quot; 数据库路径</div><div class="line">-logpath &quot;D:\Program Files\MongoDB\data\log\MongoDB.log&quot; log的路径 </div><div class="line">-logappend 追加文件</div><div class="line">-serviceName &quot;MongoDB&quot; 服务名</div><div class="line">-auth 是否需要用户验证</div><div class="line">-install 安装服务</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">mongod -dbpath &quot;D:\Program Files\MongoDB\data\db&quot; 数据库路径</div><div class="line">-logpath &quot;D:\Program Files\MongoDB\data\log\MongoDB.log&quot; log的路径 </div><div class="line">-logappend 追加文件</div><div class="line">-serviceName &quot;MongoDB&quot; 服务名</div><div class="line">-auth 是否需要用户验证</div><div class="line">-install 安装服务</div></pre></td></tr></table></figure>
 <p>2.连接 mongodb</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">shell&gt; mongo  默认链接本地数据库</div><div class="line"></div><div class="line">shell&gt; mongo://user:pwd@host:port/db 连接远程数据库</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">shell&gt; mongo  默认链接本地数据库</div><div class="line"></div><div class="line">shell&gt; mongo://user:pwd@host:port/db 连接远程数据库</div></pre></td></tr></table></figure>
 <p>3.mongoose.model 默认会帮你的集合名加复数形式(s)，所以你必须正确让 mongoose 认识你指定的集合名</p>
 <p><code>new Schama({}, {collection: &#39;你的集合名&#39;})</code></p>
 <p>or</p>
 <p><code>schema.set(&#39;collection&#39;, &#39;actor&#39;)</code></p>
-
+<h1 id="CentOS7-下安装-Mongodb-3-6-3"><a href="#CentOS7-下安装-Mongodb-3-6-3" class="headerlink" title="CentOS7 下安装 Mongodb 3.6.3"></a>CentOS7 下安装 Mongodb 3.6.3</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">// 1.下载解压</div><div class="line">wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.6.3.tgz</div><div class="line">tar-zxvf zxvf mongodb-linux-x86_64-3.6.3.tgz</div><div class="line"></div><div class="line">// 2.移动到 /usr/local/下</div><div class="line">rm -f mongodb-linux-x86_64-3.6.3.tgz</div><div class="line">mv mongodb-linux-x86_64-3.6.3 /usr/local/mongodb</div><div class="line">cd /usr/local/mongodb</div><div class="line"></div><div class="line">// 3.建立数据库存储路径和配置文件</div><div class="line">mkdir data</div><div class="line">mkdir data/db</div><div class="line">mkdir data/logs</div><div class="line">vim mongod.conf</div></pre></td></tr></table></figure>
+<p>设置环境变量<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">vim /etc/profile</div><div class="line"># mongodb</div><div class="line">export MONGODB_HOME=/usr/local/mongodb</div><div class="line">export PATH=$MONGODB_HOME/bin:$PATH</div></pre></td></tr></table></figure></p>
+<p>配置文件<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">dbpath=/usr/local/mongodb/data/db</div><div class="line">logpath=/usr/local/mongodb/data/logs/mongodb.log #这个要指定文件</div><div class="line">fork=true</div><div class="line">logappend=true #日志追加</div><div class="line">port=27017</div><div class="line"># auth=true 先注释掉</div></pre></td></tr></table></figure></p>
+<p>设置为服务必须在linux的/etc/init.d/下建立一个mongod的初始化启动文件<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd /etc/init.d/</div><div class="line">touch mongod</div><div class="line">chmod +x mongod</div><div class="line">vim mongod</div><div class="line"></div><div class="line">// 添加服务</div><div class="line">chkconfig --add mongod</div><div class="line">chkconfig mongod on</div><div class="line">service mongod start</div></pre></td></tr></table></figure></p>
+<p>启动文件<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#!/bin/bash  </div><div class="line">#chkconfig: 2345 80 90  </div><div class="line">#description: mongodb  </div><div class="line">start() &#123;  </div><div class="line">	/usr/local/mongodb/bin/mongod -f /usr/local/mongodb/mongod.conf  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line">stop() &#123;  </div><div class="line">    /usr/local/mongodb/bin/mongod -f /usr/local/mongodb/mongod.conf --shutdown  </div><div class="line">&#125;  </div><div class="line">case &quot;$1&quot; in  </div><div class="line">  start)  </div><div class="line"> start  </div><div class="line"> ;;  </div><div class="line">  </div><div class="line">stop)  </div><div class="line"> stop  </div><div class="line"> ;;  </div><div class="line">  </div><div class="line">restart)  </div><div class="line"> stop  </div><div class="line"> start  </div><div class="line"> ;;  </div><div class="line">  *)  </div><div class="line"> echo  </div><div class="line">$&quot;Usage: $0 &#123;start|stop|restart&#125;&quot;  </div><div class="line"> exit 1  </div><div class="line">esac</div></pre></td></tr></table></figure></p>
+<h1 id="Mongodb-登录授权"><a href="#Mongodb-登录授权" class="headerlink" title="Mongodb 登录授权"></a>Mongodb 登录授权</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">use admin</div><div class="line">db.createUser(&#123;user:&quot;master&quot;,pwd:&quot;master&quot;,roles:[&#123;&quot;role&quot;:&quot;userAdminAnyDatabase&quot;,&quot;db&quot;:&quot;admin&quot;&#125;]&#125;)</div><div class="line"></div><div class="line">// 退出 mongo 停止 mongod 服务</div><div class="line">// 修改 mongod.conf 使用 bind_ip=0.0.0.0 auth=true</div><div class="line">// 重启 mongod 服务</div><div class="line"></div><div class="line">use admin</div><div class="line">db.auth(&apos;master&apos;,&apos;master&apos;) </div><div class="line">use test</div><div class="line">db.createUser(&#123;user:&quot;demo&quot;,pwd:&quot;demo&quot;,roles:[&#123;&quot;role&quot;:&quot;readWrite&quot;,&quot;db&quot;:&quot;test&quot;&#125;]&#125;)</div><div class="line">db.auth(&apos;demo&apos;, &apos;demo&apos;)</div></pre></td></tr></table></figure>
+<p>最后是远程连接</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">mongo host:port/db -u user -p pwd</div></pre></td></tr></table></figure>
     
 
     
@@ -472,7 +479,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="John Doe's avatar">
+        <img src="/img/avatar.png" alt="FlyDeemon's avatar">
     </div>
 
     <!-- Sidebar Email -->
@@ -526,7 +533,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -544,7 +551,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/MongoDB/">MongoDB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/react/">react<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/英语/">英语<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/MongoDB/">MongoDB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node/">Node<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/git/">git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/react/">react<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/英语/">英语<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -568,7 +575,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">10</span>
+                <span class="sidebar-badge">11</span>
             </a>
         </li>
         
@@ -890,7 +897,7 @@ It will not impact the appearance and can give developers a lot of support :)
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+  MathJax.Hub.Config("");
 </script>
 
 <script type="text/x-mathjax-config">
@@ -902,7 +909,7 @@ It will not impact the appearance and can give developers a lot of support :)
   });
 </script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

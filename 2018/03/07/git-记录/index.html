@@ -10,7 +10,7 @@
     
     <title>
         
-            分类: vue | 
+            git 记录 | 
         
         flydeemon
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="FlyDeemon">
     <meta name="description" content="null">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,git">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://flydeemon.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: vue | flydeemon">
+    <meta property="og:title" content="git 记录 | flydeemon">
     <meta property="og:description" content="null">
-    
+    <meta property="og:article:tag" content="git"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -208,208 +208,235 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Git-服务器安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">Git 服务器安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#禁用-git-用户-shell-登录"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">禁用 git 用户 shell 登录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#公钥"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">公钥</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自动同步到站点目录"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">自动同步到站点目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-客户端"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">git 客户端</span></a></li></ol></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/05/vue-热更新问题/">vue-热更新问题</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            最近调试 vue 项目遇到一个热更新的问题
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/05/vue-热更新问题/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="FlyDeemon's avatar">
-            </div>
-            <div>
-                <strong>FlyDeemon</strong>
-                <span>9月 05, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/vue/">vue</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/25/vue-cli-test/">vue-cli 测试报错</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/25/vue-cli-test/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="FlyDeemon's avatar">
-            </div>
-            <div>
-                <strong>FlyDeemon</strong>
-                <span>8月 25, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/vue/">vue</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/16/vue-cli-eslint/">vue-cli eslint 问题</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/16/vue-cli-eslint/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="FlyDeemon's avatar">
-            </div>
-            <div>
-                <strong>FlyDeemon</strong>
-                <span>8月 16, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/vue/">vue</a>
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                git 记录
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>FlyDeemon</strong>
+        <span>3月 07, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACdUlEQVR42u3ay47bMBAEQP//TyfXAIm03UPqEaN4WsiClmUD4qBnPr++en3w8PDw8PDw8PBexvvE68/7//HQg/vze46u5HvDw8PDu5P3w6v2L9454ByWbH22Nzw8PLz7efm/yf9x/ro/2k+9Nzw8PLyX8c63e34lihLw8PDwvo6XAM4x+TGDh4eH935evqGkOF7BPJa14OHh4cW8WQPsnr8f6+/h4eHhHfDatRK/5gX60g7x8PDwLuYlW1kZF1iJes+v1ENXeHh4eJt4K4/OP22PlvzrxsPDw3snbzbSmh8tK0/Aw8PDe4qXRAP5lWRQNSmsh2U3Hh4e3sW85ABoW1D5S38lEBlmLXh4eHibeG1TP4kG2kGEPMj44cfAw8PDu5iXvKDXg4ZdBffSZAQeHh7eJl4ePeSRa765nFrsDQ8PD+8WXlsozzZRDOvHhT4eHh7eU7w8zJ299PPoNg9tN8S4eHh4eJt4edDQjpPORqnyHwAPDw/vTt6sqd9SZ2Fxflzh4eHh3clr44bZ0MCshZY/GQ8PD+8pXtL0amOL5Bgo4obzIwQPDw/vYl47EDArc9uoNy/f8fDw8J7i5aNXbZsqP2a2xRN4eHh4F/Pagaf81b/e7moHs/Dw8PDu4bWrHdKqo4SywRade3h4eHhbeZ94tcV3Hh/krbhhSY2Hh4d3Aa8tjmdhbtsAy0MQPDw8vKd4eYSal85tJJEfTodfIh4eHt7LePlw6srwQbJDPDw8vP+LlxfQ+aezVtzmkhoPDw+v5CWv5tkwQTvAmkfA9WQEHh4e3iberAHWRq6zp9V34uHh4V3M+76Fh4eHh4eHh4f3gvUbCSK6liRQuFwAAAAASUVORK5CYII=">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/git/">git</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=git 记录&url=https://flydeemon.github.io//2018/03/07/git-记录/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=git 记录&url=https://flydeemon.github.io//2018/03/07/git-记录/index.html&via=FlyDeemon" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://flydeemon.github.io//2018/03/07/git-记录/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://flydeemon.github.io//2018/03/07/git-记录/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Git-服务器安装"><a href="#Git-服务器安装" class="headerlink" title="Git 服务器安装"></a>Git 服务器安装</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">yum install git -y</div><div class="line">useradd git</div><div class="line">passwd git</div><div class="line"></div><div class="line">cd /var</div><div class="line">mkdir www</div><div class="line">chown -R git:git /var/www</div><div class="line">chmod 774 /var/www</div><div class="line">cd www</div><div class="line">git init --bare demo.git</div></pre></td></tr></table></figure>
+<h3 id="禁用-git-用户-shell-登录"><a href="#禁用-git-用户-shell-登录" class="headerlink" title="禁用 git 用户 shell 登录"></a>禁用 git 用户 shell 登录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">vim /etc/passwd</div><div class="line"></div><div class="line">git:x:1000:1000::/home/git:/usr/bin/git-shell</div></pre></td></tr></table></figure>
+<h3 id="公钥"><a href="#公钥" class="headerlink" title="公钥"></a>公钥</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd /home/git</div><div class="line">mkdir .ssh</div><div class="line">chown -R git:git .ssh</div><div class="line">touch .ssh/authorized_keys</div><div class="line"></div><div class="line">// 加入公钥</div><div class="line">vim .ssh/authorized_keys</div><div class="line"></div><div class="line">chmod 700 .ssh</div><div class="line">chmod 600 .ssh/authorized_keys</div></pre></td></tr></table></figure>
+<h3 id="自动同步到站点目录"><a href="#自动同步到站点目录" class="headerlink" title="自动同步到站点目录"></a>自动同步到站点目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd /var/www/demo.git/hooks</div><div class="line">vim post-receive</div><div class="line">chown git:git post-receive</div><div class="line">chmod +x post-receive</div></pre></td></tr></table></figure>
+<p>post-receive 文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">git --work-tree=/var/www chckout -f</div></pre></td></tr></table></figure>
+<h3 id="git-客户端"><a href="#git-客户端" class="headerlink" title="git 客户端"></a>git 客户端</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">git clone git@host:/var/www/demo.git</div><div class="line"></div><div class="line">git add .</div><div class="line">git commit -m &quot;&quot;</div><div class="line">git push</div></pre></td></tr></table></figure>
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/11/18/谓语动词/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
