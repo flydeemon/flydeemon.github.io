@@ -1,40 +1,26 @@
 ---
 title: Hello World
+tags: ams
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-$$E=mc^2$$
+$$E=mc^2$$ 
 
 $$
-\\begin{aligned}
-x_f &= x_0+k(x-x_0) \\\\
-    &= y_0+k(y-y_0) \\\\
-    &= k
-\\end{aligned}
-$$  
+\sum _{i=0}^{n-1}(i+1)=n(n+1)/2
+$$
 
-## Quick Start
 
-### Create a new post
+{% mermaid graph %}
 
-`hexo new "My New Post"`
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+{% endmermaid %}
 
-### Run server
 
-`hexo server`
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-`$ hexo generate`
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-`$ hexo deploy`
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+```bash
+echo 'hello'
+```
